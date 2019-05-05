@@ -23,7 +23,12 @@ namespace testCIT
                       "~/Content/bootstrap.css",
                       "~/Content/site.css"));
 
-            bundles.Add(new ScriptBundle("~/bundles/angular").Include("~/Scripts/angular.js"));
+            bundles.Add(new ScriptBundle("~/bundles/angular").Include("~/Scripts/angular.js",
+                "~/Scripts/angular-sanitize.js",
+                "~/Scripts/angular-animate.js",
+                "~/Scripts/angular-ui/ui-bootstrap.js",
+                "~/Scripts/angular-ui/ui-bootstrap-tpls.js",
+                "~/Scripts/ui-grid.js"));
         }
     }
 }

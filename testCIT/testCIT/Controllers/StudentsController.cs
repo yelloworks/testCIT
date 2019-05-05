@@ -9,12 +9,11 @@ using testCIT.Entities;
 
 namespace testCIT.Controllers
 {
-    public class ValuesController : ApiController
+    public class StudentsController : ApiController
     {
         // GET api/values
         public IEnumerable<Student> Get()
         {
-
             return new StudentRepository().ReadList();
         }
 

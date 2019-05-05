@@ -3,7 +3,7 @@
 
     angular.module('app', [
         // Angular modules 
-        'ui.bootstrap', 'ui.grid'
+        'ui.bootstrap', 'ui.grid', 'ngAnimate', 'ui.select'
 
         // Custom modules 
 

@@ -20,3 +20,7 @@ textarea {
     width: 500px;
     height: 250px;
 }
+
+ul {
+    list-style-type: none;
+}

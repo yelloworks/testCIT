@@ -31,6 +31,7 @@ namespace testCIT.Context
         public void Create(Student item)
         {
             _items.Add(item);
+            Save();
         }
 
         public Student Read(int id)
@@ -40,10 +41,12 @@ namespace testCIT.Context
 
         public void Update(Student item)
         {
+            item.CurrentGroup = null;
             var firstOrDefault = _items.FirstOrDefault(x => x.Id == item.Id);
             if (firstOrDefault != null)
             {
-                _items.Attach(firstOrDefault);
+                ApiDbContext.Instance.Entry(firstOrDefault).State = EntityState.Detached;
+                _items.Attach(item);
                 Save();
             }
         }

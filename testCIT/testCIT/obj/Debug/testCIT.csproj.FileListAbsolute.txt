@@ -84,3 +84,7 @@ C:\repo\CIT\testCIT\testCIT\obj\Debug\testCIT.csproj.CoreCompileInputs.cache
 C:\repo\CIT\testCIT\testCIT\obj\Debug\testCIT.csproj.CopyComplete
 C:\repo\CIT\testCIT\testCIT\obj\Debug\testCIT.dll
 C:\repo\CIT\testCIT\testCIT\obj\Debug\testCIT.pdb
+C:\repo\CIT\testCIT\testCIT\bin\EntityFramework.dll
+C:\repo\CIT\testCIT\testCIT\bin\EntityFramework.SqlServer.dll
+C:\repo\CIT\testCIT\testCIT\bin\EntityFramework.xml
+C:\repo\CIT\testCIT\testCIT\bin\EntityFramework.SqlServer.xml
