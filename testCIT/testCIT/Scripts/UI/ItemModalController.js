@@ -15,6 +15,9 @@
             $uibModalInstance.dismiss('cancel');
         };
 
+        $scope.deleteVisibility = true;
+
+
         $scope.groupsList = {};
 
         $http.get(window.location.origin +'/api/group').then(function (responce) {
@@ -24,6 +27,19 @@
             }
         });
 
+        $ctrl.delete = function() {
+            $http.delete(window.location.origin + '/api/students/' + $scope.items.Id).then(function(responce) {
+                $uibModalInstance.dismiss('delete');
+            });
+        }
+
+        checkForDelete();
+
+        function checkForDelete() {
+            if ($scope.items.Id === 0) {
+                $scope.deleteVisibility = false;
+            }
+        };
 
     });
 

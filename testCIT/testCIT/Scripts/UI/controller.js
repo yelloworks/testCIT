@@ -13,8 +13,6 @@
 
         var apiControllerUrl = window.location.origin +'/api/students';
 
-        $scope.location = window.location.origin;
-
         $scope.gridOptions = {
             showFooter: false,
             enableSorting: true,
@@ -75,10 +73,9 @@
                     });
                 }
                 
-
                 $log.log(item);
             }, function () {
-                $log.info('Modal dismissed at: ' + new Date());
+                getData();              
             });
         };
 
