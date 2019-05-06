@@ -5,13 +5,15 @@
         .module('app')
         .controller('controller', controller);
 
-    controller.$inject = ['$scope', '$http', '$log', '$uibModal'];
+    controller.$inject = ['$scope', '$http', '$log', '$uibModal', '$location'];
 
-    function controller($scope, $http, $log, $uibModal) {
+    function controller($scope, $http, $log, $uibModal, $location) {
         var $ctrl = this;
         $ctrl.title = 'controller';
 
-        var apiControllerUrl = 'api/students';
+        var apiControllerUrl = window.location.origin +'/api/students';
+
+        $scope.location = window.location.origin;
 
         $scope.gridOptions = {
             showFooter: false,

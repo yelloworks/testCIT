@@ -24,3 +24,13 @@ textarea {
 ul {
     list-style-type: none;
 }
+
+.select-modal {
+    width: 530px;
+    border-left-width: 0;
+    margin-left: 10px;
+}
+.txb-modal {
+    width: 532px;
+    height: 21px;
+}

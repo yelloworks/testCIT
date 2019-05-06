@@ -1,4 +1,4 @@
-﻿<div ng-controller="controller">
+﻿<div ng-controller="controller" align="center">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/select2/3.4.5/select2.css">    
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/selectize.js/0.8.5/css/selectize.default.css">
     <link rel="stylesheet" href="https://cdn.rawgit.com/angular-ui/ui-select/master/dist/select.min.css">
@@ -6,23 +6,21 @@
 
     <script type="text/ng-template" id="myModalContent.html">
         <div class="modal-header">
-            <h3 class="modal-title" id="modal-title">I'm a modal!</h3>
+            <h3 class="modal-title" id="modal-title">Students</h3>
         </div>
         <div class="modal-body" id="modal-body">
             <ul>
                 <li>
                     <label>Student name: </label>
-                    <input ng-model="items.Name">
+                    <input ng-model="items.Name" class="txb-modal">
                 </li>
                 <li>
                     <label>Group name: </label>
-                    <select ng-model="items.GroupId" convert-to-number width="300px">
+                    <select ng-model="items.GroupId" convert-to-number class="select-modal">
                         <option ng-repeat="option in groupsList" value="{{option.Id}}">{{option.Name}}</option>
-                    </select>
-                        
+                    </select>                    
                 </li>
             </ul>
-            {{items.GroupId}}
         </div>
         <div class="modal-footer">
             <button class="btn btn-primary" type="button" ng-click="$ctrl.ok()">OK</button>
@@ -31,7 +29,7 @@
 
     </script>
     <div ui-grid="gridOptions" ui-grid-selection class="grid"></div>
-    <button type="button" class="btn btn-primary" ng-click ="addItem()" >
+    <button type="button" class="btn btn-primary" style="width: 502px;" ng-click ="addItem()" >
         Add Item
     </button>
 

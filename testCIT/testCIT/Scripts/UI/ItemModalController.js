@@ -17,7 +17,7 @@
 
         $scope.groupsList = {};
 
-        $http.get('api/group').then(function (responce) {
+        $http.get(window.location.origin +'/api/group').then(function (responce) {
             $scope.groupsList = responce.data;
             if ($scope.groupsList != undefined && $scope.items.GroupId === 0) {
                 $scope.items.GroupId = $scope.groupsList[0].Id;
